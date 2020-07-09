@@ -1,0 +1,20 @@
+name: SplitFastQ
+channels:
+  - anaconda
+  - cyclus
+  - default
+  - bioconda
+  - defaults
+dependencies:
+  - _libgcc_mutex=0.1=main
+  - bbmap=38.67=h516909a_0
+  - java-jdk=8.45.14=0
+  - libgcc-ng=9.1.0=hdf63c60_0
+  - openjdk=8.0.152=h46b5887_1
+  - perl=5.26.2=h14c3975_0
+  - perl-app-cpanminus=1.7044=pl526_1
+  - pigz=2.4=h84994c4_0
+  - seqkit=0.10.2=0
+  - zlib=1.2.11=h7b6447c_3
+prefix: /fast/users/aperdom_m/work/miniconda/envs/SplitFastQ
+
