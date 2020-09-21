@@ -37,7 +37,7 @@ source activate SplitFastQ
 
 perl $SCRIPT1 $SCRIPT2 $TYPEDATA $R1 $R2 $FILESTOSPLIT $OUTDIR
 
-conda deactivate 
+conda deactivate
 
 ##---------------------------------------------------------- Notes: -----------------------------------------------------------------------------------------##
 # Before to run the split process, create and activate the environtment, and install the option to run in parallel using "cpanm Proc::Queue" in the terminal  #
@@ -48,5 +48,5 @@ conda deactivate
 # R1 = Path to R1_fastq                                                                                                                                       #
 # R2 = Path to R2_fastq	                                                                                                                                      #
 # FILESTOSPLIT = Total numer of files to produce as OUTPUTS                                                                                                   #
-# OUTDIR = Path to final output                                                                                                                               #	
+# OUTDIR = Path to final output                                                                                                                               #
 ##-----------------------------------------------------------------------------------------------------------------------------------------------------------##
