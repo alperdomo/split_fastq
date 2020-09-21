@@ -1,5 +1,6 @@
 # split_fastQ
 
+The code in this repository is of use for splitting fastq files
 `Helper notes`
 # To run the script you will need to indicate:                     #
 # 1. path to the parsing script split_fastq_sciATAC.pl             #
