@@ -1,13 +1,5 @@
 #usr/bin/perl
 
-##------------------------scATAC-seq Analysis---------------------##
-## Alvaro Perdomo-Sabogal                                         ##
-## Garfieldlab, HU, 2019                                          ## 
-##                                                                ##
-##------------------------ HELPER NOTES---------------------------##
-# This is a script that is used by a subroutine within  the script:#
-# split_fastq_sciATAC.pl 				           #
-##-----------------------------------------------------------------#
 use strict;
 use warnings"all";
 
