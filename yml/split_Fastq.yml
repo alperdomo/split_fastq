@@ -1,4 +1,4 @@
-name: SplitFastQ
+name: splitFastq
 channels:
   - anaconda
   - cyclus
@@ -16,5 +16,5 @@ dependencies:
   - pigz=2.4=h84994c4_0
   - seqkit=0.10.2=0
   - zlib=1.2.11=h7b6447c_3
-prefix: /fast/users/aperdom_m/work/miniconda/envs/SplitFastQ
+prefix: /miniconda/envs/splitFastq
 
