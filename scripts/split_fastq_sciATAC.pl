@@ -38,7 +38,7 @@ if ($typeData eq "paired") {
   system("perl -p -e 's/\n+/ /' $dir/$pair1 | perl -p -e 's/@/\n@/g' | sed '/^\$/d' > $dir/$pair1.'2'");
   print ("PAIR1 $pair1\n");
   system("perl -p -e 's/\n+/ /' $dir/$pair2 | perl -p -e 's/@/\n@/g' | sed '/^\$/d' > $dir/$pair2.'2'");
-  print ("This is PAIR2 PAIR2 $pair2\n");
+  print ("PAIR2 $pair2\n");
   $pair1 = $pair1.'.2';
   $pair2 = $pair2.'.2';
 
@@ -56,7 +56,7 @@ if ($typeData eq "single") {
   $pair1 = $ARGV[2];
   $numberOffastqs = $ARGV[3];
   $dir=$ARGV[4];
-  print("THIS IS PAIR 1 $pair1\n");
+  print("$pair1\n");
   system("unpigz --best -p 10 -k $pair1");
   $pair1 =~s/.gz//;
   $pair1 =~s/^.*\///;
@@ -75,7 +75,6 @@ if ($typeData eq "single") {
 
 # Getting and counting the total number of IDs
 my $IDsFile = "$dir/$pair1.IDs";
-system("This is the head of the IDs file \n"); ### TO DELETE
 system("head $IDsFile"); ## TO DELETE
 my $numberofIDs = `wc -l < $dir/$pair1.'IDs'`;
 print ("$IDsFile\n");

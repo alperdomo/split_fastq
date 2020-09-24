@@ -19,4 +19,3 @@ while (my $line = <FASTQFILE>) {
 }
 close(FASTQFILE);
 close(IDS);
-
