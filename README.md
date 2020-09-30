@@ -42,14 +42,14 @@ OUTDIR corresponds to the directory where the split fastq files will be saved.`
 
 	1. Does the splitFastq environment already exist in your machine?
 
-	2. Is the extra module from the cpan: cpanm Proc::Queue already installed? If not,  activate the splitFastq environment and run the piece of code mentioned above?
+	2. Is the extra module from the cpan: cpanm Proc::Queue already installed? If not, activate the splitFastq environment and run the piece of code mentioned above?
 
 	3. If you are using the submission script, is it already set with variables to be submitted?
 		"submit_split_fastQs.sh":
 
-	        qsub submit_split_fastQs.sh $SCRIPT1 $SCRIPT2 $TYPEDATA $R1 $R2 $FILESTOSPLIT $OUTDIR
+	  qsub submit_split_fastQs.sh $SCRIPT1 $SCRIPT2 $TYPEDATA $R1 $R2 $FILESTOSPLIT $OUTDIR
 
-	   Where:
+	  Where:
 	   - SCRIPT1=/path/to/script/split_fastq_sciATAC.pl
 
 	   - SCRIPT2=/path/to/script/filteringIDsFastQs.pl
