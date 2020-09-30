@@ -1,4 +1,4 @@
-# split_fastQ
+# split_fastq
 The code in this repository is of use for splitting fastq files. This script was intially created to split fatq files from single cell sequencing based on the barcodes for cell, and it is now of use for any fastq where the read identifiers follow the format: `@M00947:416:000000000-CJPJP:1:1101:15361:1341 1:N:0:9`. Notice that the space is of use for the splitting step. If different format, perhaps you would like to adjust the lines 35, 37, and 44 (paired end), or 58 and 63 (single end) in the split_fastq.pl script.
 
 To be able to run the code from this repository, you will need:
