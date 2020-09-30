@@ -9,7 +9,8 @@ To be able to run the code from this repository, you will need:
 
 3. Adjust the number of cores the script will use (line 8, split_fastq.pl). Currently set to 31 cores.
 
-`Helper notes`
+### Helper notes
+
 To run the script you will need to indicate:
 	1. path to the parsing script: split_fastq.pl
 	2. path to filtering script: filteringIDsFastQs.pl
