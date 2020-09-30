@@ -21,30 +21,47 @@ To run the script you will need to indicate:
 
 ### Examples:
 <br>
+<br>
 #### Paired end (of use for data sample available in the test folder):
-	`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq`
+<br>
+perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq
+<br>
 <br>
 #### Single end:
 <br>
-`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq`
+perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq
 <br>
-### Note: 
+<br>
+### Note:
 OUTDIR corresponds to the directory where the split fastq files will be saved.`
 
 `These some are the possible solutions to common issues when using the split_fastq.pl`
 	1. Does the splitFastq environment already exist in your machine?
+
 	2. Is the extra module from the cpan: cpanm Proc::Queue already installed? If not,  activate the splitFastq environment and run the piece of code mentioned above?
+
 	3. If you are using the submission script, is it already set with variables to be submitted?
 		"submit_split_fastQs.sh":
+
 	        qsub submit_split_fastQs.sh $SCRIPT1 $SCRIPT2 $TYPEDATA $R1 $R2 $FILESTOSPLIT $OUTDIR
-	   WHERE:
-	   SCRIPT1=/path/to/script/split_fastq_sciATAC.pl
-	   SCRIPT2=/path/to/script/filteringIDsFastQs.pl
-	   TYPEDATA=paired
-	   R1=/path/to/fastqs/file1.fastq.gz
-	   R2=/path/to/fastqs/file2.fastq.gz
-	   FILESTOSPLIT=integer
-	   OUTDIR=/path/to/fastqs/
+
+	   Where:
+	   - SCRIPT1=/path/to/script/split_fastq_sciATAC.pl
+
+	   - SCRIPT2=/path/to/script/filteringIDsFastQs.pl
+
+	   - TYPEDATA=paired
+
+	   - R1=/path/to/fastqs/file1.fastq.gz
+
+	   - R2=/path/to/fastqs/file2.fastq.gz
+
+	   - FILESTOSPLIT=integer
+
+	   - OUTDIR=/path/to/fastqs/
+
 	4. Perhaps your fastq files are named as *gz, but they are not in TRUE gzip format. They must be in gz format.
+
 	5. Perhaps your fastq files do not follow the format described above. Have a look of the example files in the test directory.
+
 	6. If none of these suggestions helped you out, let me know, I would be happy to help you.
