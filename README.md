@@ -12,12 +12,19 @@ To be able to run the code from this repository, you will need:
 ### Helper notes
 
 To run the script you will need to indicate:
+
 	1. path to the parsing script: split_fastq.pl
+
 	2. path to filtering script: filteringIDsFastQs.pl
+
 	3. type of data: either "paired" or "single" end reads
+
  	4. fastq_1 (only one for single end reads)
+
  	5. fastq_2
+
  	6. number of files to split the fastq files (integer)
+
  	7. Output directory.
 
 ### Examples:
