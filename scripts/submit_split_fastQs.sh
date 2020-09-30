@@ -29,9 +29,9 @@ SCRIPT1=$1
 SCRIPT2=$2
 TYPEDATA=$3
 R1=$4
-R2=$5 	#### THIS LINE IS NOT NECESSARY FOR SINGLE END READS
+R2=$5 # This line is not necessary for single end reads
 FILESTOSPLIT=$6
-OUTDIR=$7 ## THIS SHOULD BE THE SAME AS THE DIRECTORY WHERE THE RAW FILES ARE STORED. THE SPLIT PROGRAM WILL CREATE A NEW DIRECTORY THERE
+OUTDIR=$7 ## Must be directory as the one where the files are stored.
 
 source activate SplitFastQ
 

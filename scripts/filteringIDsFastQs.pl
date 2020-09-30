@@ -14,8 +14,8 @@ while (my $line = <IDS>) {
 }
 while (my $line = <FASTQFILE>) {
         chomp $line;
-        my ($cell_id, $data) = split(/:/, $line,2);
-        print "$cell_id:$data\n" if exists $params{$cell_id};
+        my ($cell_id, $data1, $data2) = split(/ /, $line,3);
+        print "$cell_id $data1\n$data2" if exists $params{$cell_id};
 }
 close(FASTQFILE);
 close(IDS);
