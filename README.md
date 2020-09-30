@@ -19,15 +19,17 @@ To run the script you will need to indicate:
  	6. number of files to split the fastq files (integer)
  	7. Output directory.
 
-`Examples:
+### Examples:
 <br>
-### Paired end (of use for data sample available in the test folder):
-	perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq
+#### Paired end (of use for data sample available in the test folder):
+	`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq`
 <br>
-### Single end:
-	perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq
-
-Note: OUTDIR corresponds to the directory where the split fastq files will be saved.`
+#### Single end:
+<br>
+`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq`
+<br>
+### Note: 
+OUTDIR corresponds to the directory where the split fastq files will be saved.`
 
 `These some are the possible solutions to common issues when using the split_fastq.pl`
 	1. Does the splitFastq environment already exist in your machine?
