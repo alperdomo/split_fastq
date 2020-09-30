@@ -21,15 +21,14 @@ To run the script you will need to indicate:
 
 ### Examples:
 <br>
+### Paired end (of use for data sample available in the test folder):
 <br>
-#### Paired end (of use for data sample available in the test folder):
-<br>
-perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq
+`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq`
 <br>
 <br>
-#### Single end:
+### Single end:
 <br>
-perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq
+`perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq`
 <br>
 <br>
 ### Note:
