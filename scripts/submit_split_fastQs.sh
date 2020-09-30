@@ -31,7 +31,7 @@ TYPEDATA=$3
 R1=$4
 R2=$5 # This line is not necessary for single end reads
 FILESTOSPLIT=$6
-OUTDIR=$7 ## Must be directory as the one where the files are stored.
+OUTDIR=$7 # Must indicate the directory where the outputs will be stored.
 
 source activate SplitFastQ
 
@@ -39,14 +39,12 @@ perl $SCRIPT1 $SCRIPT2 $TYPEDATA $R1 $R2 $FILESTOSPLIT $OUTDIR
 
 conda deactivate
 
-##---------------------------------------------------------- Notes: -----------------------------------------------------------------------------------------##
-# Before to run the split process, create and activate the environtment, and install the option to run in parallel using "cpanm Proc::Queue" in the terminal  #
-# SCRIPT1 and SCRIPT2 are found in /fast/groups/ag_garfield/work/projects/6_sc_pipeline_development/atac_pipeline_scripts/helper_scripts/ATAC_fastq_splitter. #
-# SCRIPT1= path to parsing script (split_fastq_sciATAC.pl)                                                                                                    #
-# SCRIPT2 = path to filtering script (filteringIDsFastQs.pl). Same directory as SCRIPT1                                                                       #
+# NOTES:
+# Before to run the split process, create and activate the environtment, and install the option to run in parallel using "cpanm Proc::Queue" in the terminal
+# SCRIPT1= path to parsing script (split_fastq.pl)                                                                                                    #
+# SCRIPT2 = path to filtering script (filteringIDsFastQs.pl)                                                                       #
 # TYPEDATA: paired or single                                                                                                                                  #
 # R1 = Path to R1_fastq                                                                                                                                       #
 # R2 = Path to R2_fastq	                                                                                                                                      #
-# FILESTOSPLIT = Total numer of files to produce as OUTPUTS                                                                                                   #
-# OUTDIR = Path to final output                                                                                                                               #
-##-----------------------------------------------------------------------------------------------------------------------------------------------------------##
+# FILESTOSPLIT = Total numer of files to produce (integer)                                                                                                  #
+# OUTDIR = Path to final output

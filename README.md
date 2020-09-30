@@ -4,12 +4,9 @@ The code in this repository is of use for splitting fastq files. This script was
 To be able to run the code from this repository, you will need:
 1. Create the environment using the split_fastq.yml file: conda env create -f split_fastq.yml. It will create a conda environment called splitFastq (Recommended step). The user can also install the required programs on its local file system using the listed programs in the yml file as guide.
 
-2. Install the Proc::Queue perl module within the CovSnp environment using `cpanm Proc::Queue`.
-This is of use running it in parallel.
-conda env create -f split_fastq.yml
+2. Install the Proc::Queue perl module within the CovSnp environment using `cpanm Proc::Queue`. This is of use running it in parallel.
 
-
-This repository is of use for splitting fastq files where identifiers 'barcodes' per cell are used as the first field in the read names. for instance: @AGCGATAGAACGAATTCGAGAACCGGAGAGGCGAAG:78394978#3300; where from @....: corresponds to the cell's barcode.
+3. Adjust the number of cores the script will use (line 8, split_fastq.pl). Currently set to 31 cores.
 
 `Helper notes`
 To run the script you will need to indicate:
@@ -23,15 +20,15 @@ To run the script you will need to indicate:
  	7. Output directory. It can be the same of the fastq files
 
 
-`Example:
+`Examples:
 	# Paired end (of use for data sample available in the test folder):
 	perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq
 
 	# Single end:
-	perl ../scripts/split_fastq.pl filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 OUTDIR
+	perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq
 Note: OUTDIR corresponds to the directory where the split fastq files will be saved.`
 
-`These some are the likely explanations why the split_fastq.pl is not working`
+`These some are the possible solutions to common issues when using the split_fastq.pl`
 	1. Have you created the environment splitFastq using split_fastq.yml
 	2. Is the extra module from the cpan: cpanm Proc::Queue already installed? If not,  activate the splitFastq environment and run the piece of code mentioned above?
 	3. If you are using the submission script, is it already set with variables to be submitted?
@@ -46,4 +43,5 @@ Note: OUTDIR corresponds to the directory where the split fastq files will be sa
 	   FILESTOSPLIT=integer
 	   OUTDIR=/path/to/fastqs/
 	4. Perhaps your fastq files are named as *gz, but they are not in TRUE gzip format.
-	5. If none of these suggestions helped you out, I'b be happy to help.
+	5. Perhaps your fastq files do not follow the format described above. Have a look of the example files in the test directory.
+	6. If none of these suggestions helped you out, I'b be happy to help.
