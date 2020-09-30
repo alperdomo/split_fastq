@@ -29,13 +29,13 @@ To run the script you will need to indicate:
 
 ### Examples:
 
-### Paired end (of use for data sample available in the test folder):
+#### Paired end (of use for data sample available in the test folder):
 perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl paired L001_R1_001.fastq.gz L001_R2_001.fastq.gz 3 splitted_fastq
 
-### Single end:
+#### Single end:
 perl ../scripts/split_fastq.pl ../scripts/filteringIDsFastQs.pl single L001_R1_001.fastq.gz 3 splitted_fastq
 
-### Note:
+##### Note:
 OUTDIR corresponds to the directory where the split fastq files will be saved.`
 
 ### These some are the possible solutions to common issues when using the split_fastq.pl`
